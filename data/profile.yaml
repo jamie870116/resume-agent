@@ -1,0 +1,235 @@
+# ============================================================
+# CANDIDATE — 基本個人資訊
+# ============================================================
+candidate:
+  full_name: "Jamie Lai"
+  legal_name: "Chieh-Ying Lai"
+  email: "cylai0116@gmail.com"
+  phone: "+1-984-317-9219"
+  location: "Charlotte, NC, USA"
+  linkedin: "linkedin.com/in/chiehying-lai"
+  github: "github.com/jamie870116"
+  portfolio: "https://jamielaicy.com/"
+  visa_status: "OPT/STEM OPT eligible, no sponsorship needed"
+  languages_spoken:
+    - "Chinese (native)"
+    - "English (fluent)"
+    - "Japanese (fluent, JLPT N1)"
+
+# ============================================================
+# TARGET ROLES — 求職方向
+# ============================================================
+target_roles:
+  - name: "AI Engineer"
+    fit: "primary"
+  - name: "Software Engineer"
+    fit: "primary"
+  - name: "Full Stack Engineer"
+    fit: "secondary"
+  - name: "Frontend Engineer"
+    fit: "secondary"
+  - name: "Backend Engineer"
+    fit: "secondary"
+  - name: "Data Engineer"
+    fit: "stretch"
+
+# ============================================================
+# SKILLS — 所有技能的完整清單
+# Agent 可以調整分類名稱、順序、和取捨，但不能新增不在此處的技能
+# ============================================================
+skills:
+  programming_languages:
+    - Python
+    - TypeScript
+    - JavaScript
+    - SQL
+    - PHP
+
+  ai_ml:
+    - LLM Workflow Design
+    - AI Agents
+    - OpenAI GPT API
+    - Google Gemini API
+    - Claude API
+    - MCP (Model Context Protocol)
+    - Prompt Engineering
+    - RAG (Retrieval-Augmented Generation)
+    - PyTorch
+    - Computer Vision
+    - OpenCV
+    - scikit-learn
+    - Pandas
+    - Numpy
+
+  frontend:
+    - ReactJS
+    - Vue.js
+    - Tailwind CSS
+    - Bootstrap
+    - jQuery
+    - HTML5
+    - CSS
+    - Three.js
+
+  backend:
+    - Django
+    - Laravel
+    - RESTful APIs
+    - MySQL
+    - Node.js
+
+  devops_cloud:
+    - Docker
+    - AWS (EC2, S3)
+    - GitHub Actions
+    - CI/CD Pipeline Development
+    - Linux
+
+  tools:
+    - Git
+    - GitHub
+    - Figma
+    - Jira
+    - GitHub Copilot
+    - Claude Code
+    - Microsoft 365
+
+# ============================================================
+# EXPERIENCE — 工作經歷
+# 排列順序固定為由近到遠，Agent 不可更動順序
+# ============================================================
+experiences:
+  - id: "ucsb_research"
+    company: "University of California, Santa Barbara"
+    role: "Graduate Research Assistant"
+    period: "Jan 2025 – Dec 2025"
+    location: "Santa Barbara, CA"
+    keywords:
+      - LLM
+      - multi-agent
+      - AI
+      - distributed systems
+      - research
+      - Python
+      - robotics
+    bullets:
+      - "Built multi-agent LLM task planning system using Python and OpenAI GPT API, integrating ML model outputs into a distributed decision pipeline within AI2-THOR simulation."
+      - "Developed multi-agent LLM coordination system featuring log-based vs. summary-based memory representations, evaluating centralized and decentralized planning architectures for task robustness."
+      - "Benchmarked centralized vs. decentralized planning architectures, applying algorithm design and distributed system thinking to evaluate trade-offs in multi-robot coordination."
+      - "First-author paper under review at IROS 2026 on LLM-based multi-agent coordination; log-based memory outperforms summary-based methods (statistically validated)."
+
+  - id: "topia_intern"
+    company: "Topia, Inc."
+    role: "Software Engineer Intern"
+    period: "Aug 2025 – Dec 2025"
+    location: "Burlington, NC, USA (Remote)"
+    keywords:
+      - React
+      - TypeScript
+      - frontend
+      - CI/CD
+      - full-stack
+      - Tailwind CSS
+    bullets:
+      - "Developed and launched a responsive company website using React.js, TypeScript, and Tailwind CSS, implementing a modular architecture that reduced development time for new pages by 30% and improved SEO visibility."
+      - "Collaborated with designers to convert Figma wireframes into responsive, cross-platform interfaces, ensuring a seamless user experience across desktop and mobile."
+      - "Built and maintained CI/CD pipelines using GitHub Actions, automating build and deployment workflows."
+      - "Configured Microsoft 365, Outlook and Teams user accounts and permission policies, managed file access controls via SharePoint and OneDrive."
+
+  - id: "tsmc_research"
+    company: "Taiwan Semiconductor Manufacturing Co., Ltd and National Chung Hsing University"
+    role: "Research Assistant"
+    period: "Feb 2021 – Feb 2022"
+    location: "Taichung, Taiwan"
+    keywords:
+      - ML
+      - edge computing
+      - Docker
+      - PyTorch
+      - computer vision
+      - production
+      - RESTful API
+    bullets:
+      - "Designed and deployed production edge ML infrastructure for real-time safety and PPE compliance detection using PyTorch-based object detection and semantic segmentation models on Jetson Nano."
+      - "Built real-time inference pipeline containerized with Docker, exposed via RESTful APIs, achieving F1: 97%, mAP: 99.77%, IoU: 0.86 in safety-critical environments."
+
+  - id: "shangda_dev"
+    company: "ShangDa Plastic Inc."
+    role: "Software Developer"
+    period: "Jun 2020 – Feb 2021"
+    location: "Miao-li, Taiwan"
+    keywords:
+      - full-stack
+      - backend
+      - Laravel
+      - Vue.js
+      - AWS
+      - Agile
+      - MySQL
+    bullets:
+      - "Devised Manufacturing MIS using PHP Laravel, MySQL and Vue.js, reducing manual data handling by 50% and improving data accuracy."
+      - "Designed RESTful APIs streamlining data exchange across MVC architecture and deployed services on AWS EC2 with data storage on S3."
+      - "Collaborated in an Agile development team to iteratively deliver and refine system features, achieving a 50% increase in data input efficiency and eliminating human errors."
+
+# ============================================================
+# PROJECTS — 專案經歷
+# Agent 最多選 1 個，根據 JD 相關性決定選哪個
+# ============================================================
+projects:
+  - id: "resume_agent"
+    name: "Resume Agent"
+    period: "Apr 2026 – Present"
+    tech:
+      - Claude Code
+      - Claude API
+      - LaTeX
+      - Git
+      - YAML
+    keywords:
+      - AI agent
+      - LLM
+      - CLI tool
+      - automation
+      - tool use
+    bullets:
+      - "Built a Claude Code-powered CLI agent that tailors a LaTeX resume to a specific job description by reading a structured personal profile and rewriting only the editable sections of a LaTeX template."
+      - "Designed a two-layer architecture separating system workflow logic (CLAUDE.md) from user profile data (profile.yaml), enabling the tool to be reused across different job applications without modifying core instructions."
+      - "Implemented a human-in-the-loop review flow with section-by-section confirmation checkpoints before pushing the generated file to Overleaf via Git."
+
+  - id: "pokopia"
+    name: "Pokopia Blueprint Editor"
+    period: "Apr 2026 – Present"
+    tech:
+      - React
+      - Three.js
+      - Zustand
+      - Node.js
+      - Puppeteer
+    keywords:
+      - frontend
+      - 3D
+      - full-stack
+      - web scraping
+      - React
+    bullets:
+      - "Built a full-stack web tool featuring a 100x100 2D grid blueprint editor with real-time 3D preview synchronization, supporting multi-layer building planning with Three.js instanced mesh rendering for performance optimization."
+      - "Developed a Node.js web scraper using Puppeteer and Cheerio to automate extraction of 300+ records from an infinite-scroll website, with incremental crawling and resume support."
+      - "Implemented multi-condition filtering, infinite scroll pagination, and SPA navigation with React Router."
+
+  - id: "agent_utest"
+    name: "AgentUTest"
+    period: "Feb 2024 – Mar 2024"
+    tech:
+      - Python
+      - React
+      - Django
+      - OpenAI GPT-4 API
+    keywords:
+      - LLM
+      - agent
+      - full-stack
+      - AI
+      - code generation
+    bullets:
+      - "Developed full-stack AI application with React frontend and Python Django backend, integrating OpenAI GPT-4 API as an ML inference endpoint for automated reasoning and decision support workflows."
+      - "Implemented LLM-powered code generation pipeline supporting multi-language test generation across Python, Java, C, and C++ at scale."
