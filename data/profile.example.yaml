@@ -1,0 +1,138 @@
+# ============================================================
+# CANDIDATE — 基本個人資訊
+# ============================================================
+candidate:
+  full_name: "Your Name"
+  legal_name: "Your Legal Name"
+  email: "your.email@example.com"
+  phone: "+1-000-000-0000"
+  location: "City, State, Country"
+  linkedin: "linkedin.com/in/your-profile"
+  github: "github.com/your-username"
+  portfolio: "https://yourportfolio.com/"
+  visa_status: "e.g. US Citizen / OPT / H1B"
+  languages_spoken:
+    - "English (native)"
+    - "Other Language (proficiency level)"
+
+# ============================================================
+# TARGET ROLES — 求職方向
+# ============================================================
+target_roles:
+  - name: "AI Engineer"
+    fit: "primary"
+  - name: "Software Engineer"
+    fit: "primary"
+  - name: "Full Stack Engineer"
+    fit: "secondary"
+
+# ============================================================
+# SKILLS — 所有技能的完整清單
+# Agent 可以調整分類名稱、順序、和取捨，但不能新增不在此處的技能
+# ============================================================
+skills:
+  programming_languages:
+    - Python
+    - TypeScript
+    - JavaScript
+    - SQL
+
+  ai_ml:
+    - LLM Workflow Design
+    - AI Agents
+    - OpenAI GPT API
+    - Claude API
+    - Prompt Engineering
+    - RAG (Retrieval-Augmented Generation)
+    - PyTorch
+
+  frontend:
+    - ReactJS
+    - Vue.js
+    - Tailwind CSS
+    - HTML5
+    - CSS
+
+  backend:
+    - Django
+    - RESTful APIs
+    - MySQL
+    - Node.js
+
+  devops_cloud:
+    - Docker
+    - AWS (EC2, S3)
+    - GitHub Actions
+    - CI/CD Pipeline Development
+    - Linux
+
+  tools:
+    - Git
+    - GitHub
+    - Jira
+    - Claude Code
+
+# ============================================================
+# EXPERIENCE — 工作經歷
+# 排列順序固定為由近到遠，Agent 不可更動順序
+# ============================================================
+experiences:
+  - id: "job_2"
+    company: "Company Name"
+    role: "Your Role Title"
+    period: "Jan 2025 – Present"
+    location: "City, State"
+    keywords:
+      - keyword1
+      - keyword2
+      - keyword3
+    bullets:
+      - "Describe what you built or achieved, with specific technologies and measurable outcomes."
+      - "Another bullet point grounded in real work you did."
+      - "A third bullet if applicable."
+
+  - id: "job_1"
+    company: "Previous Company Name"
+    role: "Your Previous Role"
+    period: "Jan 2023 – Dec 2024"
+    location: "City, State"
+    keywords:
+      - keyword1
+      - keyword2
+    bullets:
+      - "Describe what you built or achieved."
+      - "Another bullet point."
+
+# ============================================================
+# PROJECTS — 專案經歷
+# Agent 最多選 1 個，根據 JD 相關性決定選哪個
+# ============================================================
+projects:
+  - id: "project_1"
+    name: "Your Project Name"
+    period: "Jan 2024 – Mar 2024"
+    tech:
+      - Python
+      - React
+      - Django
+    keywords:
+      - full-stack
+      - AI
+      - web
+    bullets:
+      - "Describe the project and what you built, with specific technical details."
+      - "Highlight a key outcome or architectural decision."
+      - "Optional third bullet."
+
+  - id: "project_2"
+    name: "Another Project"
+    period: "Jun 2023 – Aug 2023"
+    tech:
+      - TypeScript
+      - Node.js
+    keywords:
+      - backend
+      - API
+    bullets:
+      - "Describe what this project does and your role in building it."
+      - "Highlight a technical challenge you solved."

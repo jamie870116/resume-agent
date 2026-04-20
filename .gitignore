@@ -5,3 +5,6 @@ __pycache__
 *.pdf
 output/
 .overleaf/
+data/applications/*
+data/profile.yaml
+data/cv.md
