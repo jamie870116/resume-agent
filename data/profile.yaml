@@ -12,7 +12,7 @@ candidate:
   portfolio: "https://jamielaicy.com/"
   visa_status: "OPT/STEM OPT eligible, no sponsorship needed"
   languages_spoken:
-    - "Chinese (native)"
+    - "Mandarin Chinese (native)"
     - "English (fluent)"
     - "Japanese (fluent, JLPT N1)"
 
@@ -42,6 +42,7 @@ skills:
     - Python
     - TypeScript
     - JavaScript
+    - Swift
     - SQL
     - PHP
 
@@ -85,6 +86,14 @@ skills:
     - CI/CD Pipeline Development
     - Linux
 
+  mobile:
+    - Swift
+    - ARKit
+    - CoreML
+    - Firebase
+    - Xcode
+    - MVVM
+
   tools:
     - Git
     - GitHub
@@ -93,6 +102,23 @@ skills:
     - GitHub Copilot
     - Claude Code
     - Microsoft 365
+
+# ============================================================
+# RELEVANT COURSES — 修課紀錄（可供 Agent 選用於 Skills 區塊）
+# ============================================================
+relevant_courses:
+  - "Software Engineering"
+  - "Data Structures and Algorithms (Topics in Combinatorial Algorithms)"
+  - "Computer Graphics (Visual Computing and Interaction – Extended Reality)"
+  - "Future User Interfaces"
+  - "Digital Image Processing"
+  - "Machine Learning"
+  - "Deep Learning"
+  - "Introduction to Robotic Vision"
+  - "Big Data Analysis"
+  - "Trustworthy ML in Security"
+  - "Foundations for Blockchains and Distributed Systems"
+  - "Bioinformatics"
 
 # ============================================================
 # EXPERIENCE — 工作經歷
@@ -119,7 +145,7 @@ experiences:
       - "First-author paper under review at IROS 2026 on LLM-based multi-agent coordination; log-based memory outperforms summary-based methods (statistically validated)."
 
   - id: "topia_intern"
-    company: "Topia, Inc."
+    company: "Topia Holdings, Inc."
     role: "Software Engineer Intern"
     period: "Aug 2025 – Dec 2025"
     location: "Burlington, NC, USA (Remote)"
@@ -166,6 +192,7 @@ experiences:
       - AWS
       - Agile
       - MySQL
+      - MVC
     bullets:
       - "Devised Manufacturing MIS using PHP Laravel, MySQL and Vue.js, reducing manual data handling by 50% and improving data accuracy."
       - "Designed RESTful APIs streamlining data exchange across MVC architecture and deployed services on AWS EC2 with data storage on S3."
@@ -191,6 +218,9 @@ projects:
       - CLI tool
       - automation
       - tool use
+      - separation of concerns
+      - modular architecture
+      - OOP
     bullets:
       - "Built a Claude Code-powered CLI agent that tailors a LaTeX resume to a specific job description by reading a structured personal profile and rewriting only the editable sections of a LaTeX template."
       - "Designed a two-layer architecture separating system workflow logic (CLAUDE.md) from user profile data (profile.yaml), enabling the tool to be reused across different job applications without modifying core instructions."
@@ -211,6 +241,8 @@ projects:
       - full-stack
       - web scraping
       - React
+      - component-based architecture
+      - state management
     bullets:
       - "Built a full-stack web tool featuring a 100x100 2D grid blueprint editor with real-time 3D preview synchronization, supporting multi-layer building planning with Three.js instanced mesh rendering for performance optimization."
       - "Developed a Node.js web scraper using Puppeteer and Cheerio to automate extraction of 300+ records from an infinite-scroll website, with incremental crawling and resume support."
@@ -218,7 +250,7 @@ projects:
 
   - id: "agent_utest"
     name: "AgentUTest"
-    period: "Feb 2024 – Mar 2024"
+    period: "Jan 2024 – Mar 2024"
     tech:
       - Python
       - React
@@ -226,10 +258,38 @@ projects:
       - OpenAI GPT-4 API
     keywords:
       - LLM
-      - agent
+      - multi-agent collaboration
+      - agent orchestration
+      - Generate-Discuss-Verify loop
+      - consensus mechanism
       - full-stack
       - AI
       - code generation
+      - OOP
     bullets:
-      - "Developed full-stack AI application with React frontend and Python Django backend, integrating OpenAI GPT-4 API as an ML inference endpoint for automated reasoning and decision support workflows."
-      - "Implemented LLM-powered code generation pipeline supporting multi-language test generation across Python, Java, C, and C++ at scale."
+      - "Developed full-stack AI application with React frontend and Python Django backend (MVC), integrating OpenAI GPT-4 API as an LLM inference endpoint for automated unit test generation."
+      - "Designed a Generate-Discuss-Verify loop where multiple LLM agents collaboratively generate, peer-review, and consensus-vote to verify unit test cases, improving test correctness across Python, Java, C, and C++."
+      - "Implemented agent orchestration layer coordinating structured inter-agent dialogue and voting-based verification, enabling LLMs to self-correct and iteratively improve generated test quality."
+  - id: "ar_indoor_nav"
+    name: "Indoor AR Emergency Navigation App"
+    period: "April 2024 – June 2024."
+    tech:
+      - Swift
+      - ARKit
+      - CoreML
+      - YOLOv8
+      - Firebase
+    keywords:
+      - iOS
+      - Swift
+      - AR (Augmented Reality)
+      - on-device ML
+      - indoor navigation
+      - MVVM
+      - OOP
+      - design patterns
+      - on-device inference
+    bullets:
+      - "Built an iOS emergency evacuation app using ARKit and iPhone built-in sensors (LiDAR, GPS, camera) to overlay real-time safe-route guidance onto the physical environment via augmented reality."
+      - "Integrated a modified YOLOv8 model with CoreML for on-device obstacle detection, enabling dynamic route recalculation without relying on network inference during emergencies."
+      - "Architected the application following the MVVM (Model-View-ViewModel) design pattern, cleanly separating AR rendering, sensor data processing, and Firebase map synchronization into independent layers to improve maintainability and testability."

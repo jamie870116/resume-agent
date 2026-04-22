@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    color: #222;
+    background: white;
+    width: 210mm;
+    min-height: 297mm;
+  }
+
+  /* ── Header banner ── */
+  .header {
+    background: #E1E1E1;
+    padding: 28px 40px 22px;
+  }
+
+  .header-name {
+    font-size: 28px;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 10px;
+  }
+
+  .header-contacts {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .header-contacts a {
+    color: #222;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* ── Body ── */
+  .body-wrap {
+    padding: 32px 40px 40px;
+  }
+
+  .date {
+    margin-bottom: 18px;
+  }
+
+  .recipient-block {
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .greeting {
+    margin-bottom: 16px;
+  }
+
+  .paragraphs {
+    line-height: 1.75;
+  }
+
+  .paragraphs p {
+    text-indent: 24pt;
+    margin-bottom: 10px;
+  }
+
+  /* ── Closer ── */
+  .closer {
+    margin-top: 28px;
+    text-align: right;
+  }
+
+  .closer-word {
+    margin-bottom: 4px;
+  }
+
+  .signature {
+    width: 150px;
+    margin-left: auto;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===AGENT:START:HEADER=== -->
+<div class="header">
+  <div class="header-name">Jamie Lai</div>
+  <div class="header-contacts">
+    <a href="mailto:cylai0116@gmail.com">&#9993;&ensp;cylai0116@gmail.com</a>
+    <a href="https://linkedin.com/in/chiehying-lai">&#xFB;&ensp;linkedin.com/in/chiehying-lai</a>
+    <a href="tel:+19843179219">&#9990;&ensp;+1-984-317-9219</a>
+  </div>
+</div>
+<!-- ===AGENT:END:HEADER=== -->
+
+<div class="body-wrap">
+
+  <!-- ===AGENT:START:RECIPIENT=== -->
+  <div class="date">MMMM DD, YYYY</div>
+  <div class="recipient-block">
+    Hiring Manager<br>
+    Company Name
+  </div>
+  <div class="greeting">Dear Hiring Manager,</div>
+  <!-- ===AGENT:END:RECIPIENT=== -->
+
+  <!-- ===AGENT:START:BODY=== -->
+  <div class="paragraphs">
+    <p>Opening paragraph introducing yourself and the role you are applying for.</p>
+    <p>Second paragraph highlighting your most relevant experience and how it connects to the role.</p>
+    <p>Third paragraph explaining why you are interested in this company specifically and what you can contribute.</p>
+    <p>Closing paragraph with a call to action.</p>
+  </div>
+  <!-- ===AGENT:END:BODY=== -->
+
+  <div class="closer">
+    <div class="closer-word">Sincerely,</div>
+    <img class="signature" src="signature.png" alt="Signature">
+  </div>
+
+</div>
+</body>
+</html>

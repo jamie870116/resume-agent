@@ -39,8 +39,8 @@ Sept 2018 – Jun 2020 | Taichung, Taiwan
   independent of the planning architecture
 - Paper is under review at IROS 2026 (top-tier robotics conference)
 
-### Topia, Inc. — Software Engineer Intern
-- Topia, Inc. is an early-stage startup, which meant requirements were often
+### Topia Holdings, Inc. — Software Engineer Intern
+- Topia Holdings, Inc. is an early-stage startup, which meant requirements were often
   ambiguous, priorities shifted quickly, and decisions needed to be made with
   incomplete information
 - Developed strong ability to adapt to unclear or evolving requirements —

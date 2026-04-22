@@ -8,3 +8,4 @@ output/
 data/applications/*
 data/profile.yaml
 data/cv.md
+templates/signature.png

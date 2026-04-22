@@ -6,7 +6,7 @@ This file defines the complete operating instructions for Claude Code when worki
 
 ## What This Repo Does
 
-This tool generates a tailored LaTeX resume for a specific job application. Given a job description (JD) as text or URL, it selects the most relevant content from the user's profile, rewrites the three editable sections of theLaTeX template, and pushes the result to Overleaf via Git.
+This tool generates a tailored LaTeX resume for a specific job application. Given a job description (JD) as text or URL, it selects the most relevant content from the user's profile, rewrites the three editable sections of the LaTeX template, and pushes the result to Overleaf via Git.
 
 ---
 
@@ -60,6 +60,58 @@ The three markers are: `SKILLS`, `EXPERIENCE`, `PROJECTS`.
   use \resumeItem, \resumeSubheading, \resumeProjectHeading etc.
   exactly as they appear in the template
 - Do not add any new \usepackage or \newcommand declarations
+
+---
+
+## Modes
+
+The agent is triggered exclusively by slash commands.
+Do not execute any resume generation task unless the user's message
+starts with one of the following commands.
+
+---
+
+### /resume [JD text or URL]
+
+Execute Steps 1 through 8 only (resume generation).
+
+Example:
+  /resume https://jobs.google.com/...
+  /resume We are looking for an AI Engineer who...
+
+---
+
+### /resume_cover [JD text or URL]
+
+Execute Steps 1 through 11 (resume + cover letter generation).
+
+Example:
+  /resume_cover https://jobs.google.com/...
+  /resume_cover We are looking for an AI Engineer who...
+
+---
+
+### If no valid slash command is detected
+
+If the user's message does not start with /resume or /resume_cover,
+do not execute any generation workflow.
+Instead reply:
+
+"Please use one of the following commands to start:
+
+  \resume [JD text or URL]
+  \resume_cover [JD text or URL]"
+
+---
+
+### Parsing the command
+
+After detecting the command, extract everything after the command keyword
+as the JD input and pass it directly to Step 1 (JD Fetcher).
+
+If nothing follows the command keyword, ask:
+"Please provide the job description text or URL."
+Then wait for the user's response before proceeding to Step 1.
 
 ---
 
@@ -260,6 +312,93 @@ Append one row to the table in `data/applications/applications.md`:
 ```
 
 Print: "Tracking records updated."
+
+---
+
+### Step 9 — Generate Cover Letter Draft
+
+Read `templates/cover_letter.html` in full.
+
+Read the following from `data/profile.yaml`:
+- `candidate` block (name, email, linkedin, phone)
+- `narrative` block (headline, superpowers)
+- `target_roles`
+
+Using the confirmed resume content from Steps 3–4, the parsed JD from Step 2,
+and the profile narrative above, generate a tailored cover letter by rewriting
+the content inside the three AGENT marker regions of the HTML template:
+
+**HEADER region:**
+Do not change the candidate info.
+Only update the date to today's date in format: Month DD, YYYY
+
+**RECIPIENT region:**
+Fill in the actual date, company name, and hiring manager name if found in the JD.
+If no hiring manager name is found, keep "Dear Hiring Manager,"
+
+**BODY region:**
+Write 3–4 paragraphs in a professional but natural tone.
+- Paragraph 1: State the role and company, and a one-line reason why you are excited.
+- Paragraph 2: Draw from the most relevant experience entry confirmed in Step 4,
+  connecting it directly to a key responsibility from the JD.
+- Paragraph 3: Reference the confirmed project from Step 4 or a specific technical
+  skill that addresses a core requirement in the JD.
+- Paragraph 4: Express genuine interest in the company and close with a call to action.
+
+Content rules:
+- All facts, metrics, and technical claims must come from `profile.yaml` or `cv.md`
+- You may rewrite and rephrase — do not fabricate anything not in the source files
+- Do not use generic filler phrases like "I am a passionate developer" or
+  "I am a quick learner" — be specific and grounded in real experience
+
+Generate the output filename:
+`output/{CompanyName}_{RoleTitle}_{YYYYMMDD}_coverletter.html`
+
+Save the filled HTML to that path.
+Do not overwrite `templates/cover_letter.html`.
+
+---
+
+### Step 10 — Human Review: Cover Letter
+
+Print the full cover letter body text to the terminal in this format:=== REVIEW — COVER LETTER ===
+Date: [date]
+To: [recipient], [company]
+[paragraph 1]
+[paragraph 2]
+[paragraph 3]
+[paragraph 4]
+=============================Then ask:
+"Does the cover letter look correct?
+Type YES to generate the PDF, or describe what you want to change."
+
+Wait for response. If the user requests changes, apply them to the saved
+HTML file and reprint the body text.
+Repeat until YES.
+
+---
+
+### Step 11 — Generate PDF + Update Tracking
+
+**Generate PDF:**
+Run the following command:node generate_pdf.mjs output/{coverletter_filename}.html 
+output/{coverletter_filename}.pdf 
+--format=a4Wait for the command to complete and confirm the PDF was created successfully.
+Print: "Cover letter PDF saved to output/{coverletter_filename}.pdf"
+
+**Push to Overleaf:**
+Copy both the `.html` and `.pdf` files into `.overleaf/agent/`
+Run:cd .overleaf
+git add agent/{coverletter_filename}.html agent/{coverletter_filename}.pdf
+git commit -m "Add {company} {role} cover letter – {date}"
+git push**Update tracking records:**
+In `data/applications/applications.csv`, find the row added in Step 8
+and append to the `notes` column:
+`coverletter: {coverletter_filename}.pdf`
+
+In `data/applications/applications.md`, do the same for the matching row.
+
+Print: "All done. Resume and cover letter are live on Overleaf."
 
 ---
 
