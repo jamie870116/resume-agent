@@ -85,6 +85,7 @@ skills:
     - GitHub Actions
     - CI/CD Pipeline Development
     - Linux
+    - NGINX
 
   mobile:
     - Swift
@@ -109,7 +110,7 @@ skills:
 relevant_courses:
   - "Software Engineering"
   - "Data Structures and Algorithms (Topics in Combinatorial Algorithms)"
-  - "Computer Graphics (Visual Computing and Interaction – Extended Reality)"
+  - "Computer Graphics (Visual Computing and Interaction - Extended Reality)"
   - "Future User Interfaces"
   - "Digital Image Processing"
   - "Machine Learning"
@@ -128,7 +129,7 @@ experiences:
   - id: "ucsb_research"
     company: "University of California, Santa Barbara"
     role: "Graduate Research Assistant"
-    period: "Jan 2025 – Dec 2025"
+    period: "Jan 2025 - Dec 2025"
     location: "Santa Barbara, CA"
     keywords:
       - LLM
@@ -147,7 +148,7 @@ experiences:
   - id: "topia_intern"
     company: "Topia Holdings, Inc."
     role: "Software Engineer Intern"
-    period: "Aug 2025 – Dec 2025"
+    period: "Aug 2025 - Dec 2025"
     location: "Burlington, NC, USA (Remote)"
     keywords:
       - React
@@ -156,33 +157,40 @@ experiences:
       - CI/CD
       - full-stack
       - Tailwind CSS
+      - Google Analytics
+      - SEO analysis
+      - data-driven insights
     bullets:
       - "Developed and launched a responsive company website using React.js, TypeScript, and Tailwind CSS, implementing a modular architecture that reduced development time for new pages by 30% and improved SEO visibility."
       - "Collaborated with designers to convert Figma wireframes into responsive, cross-platform interfaces, ensuring a seamless user experience across desktop and mobile."
-      - "Built and maintained CI/CD pipelines using GitHub Actions, automating build and deployment workflows."
+      - "Built and maintained CI/CD pipelines using Git and GitHub Actions, automating build and deployment workflows."
       - "Configured Microsoft 365, Outlook and Teams user accounts and permission policies, managed file access controls via SharePoint and OneDrive."
-
+      - "Set up Google Analytics infrastructure to enable ongoing SEO monitoring and data-driven optimization for a newly deployed application."
+  
   - id: "tsmc_research"
     company: "Taiwan Semiconductor Manufacturing Co., Ltd and National Chung Hsing University"
     role: "Research Assistant"
-    period: "Feb 2021 – Feb 2022"
+    period: "Feb 2021 - Feb 2022"
     location: "Taichung, Taiwan"
     keywords:
       - ML
       - edge computing
       - Docker
       - PyTorch
+      - CUDA
+      - GPU inference
       - computer vision
       - production
       - RESTful API
     bullets:
       - "Designed and deployed production edge ML infrastructure for real-time safety and PPE compliance detection using PyTorch-based object detection and semantic segmentation models on Jetson Nano."
       - "Built real-time inference pipeline containerized with Docker, exposed via RESTful APIs, achieving F1: 97%, mAP: 99.77%, IoU: 0.86 in safety-critical environments."
+      - "Deployed PyTorch models with CUDA-accelerated inference on Jetson Nano GPU, optimizing throughput for real-time edge deployment."
 
   - id: "shangda_dev"
     company: "ShangDa Plastic Inc."
     role: "Software Developer"
-    period: "Jun 2020 – Feb 2021"
+    period: "Feb 2020 - Feb 2021"
     location: "Miao-li, Taiwan"
     keywords:
       - full-stack
@@ -193,10 +201,49 @@ experiences:
       - Agile
       - MySQL
       - MVC
+      - RESTful API
+      - NGINX
+      - role-based access control
+      - e-commerce
+      - normalized schema
+      - indexing
     bullets:
       - "Devised Manufacturing MIS using PHP Laravel, MySQL and Vue.js, reducing manual data handling by 50% and improving data accuracy."
       - "Designed RESTful APIs streamlining data exchange across MVC architecture and deployed services on AWS EC2 with data storage on S3."
       - "Collaborated in an Agile development team to iteratively deliver and refine system features, achieving a 50% increase in data input efficiency and eliminating human errors."
+      - "Designed a normalized MySQL schema with targeted indexing strategies, including composite indexes on high-traffic query paths across procurement, inventory, and sales modules, optimizing lookup performance as data volumes grew."
+      - "Implemented interconnected inventory workflows where raw material procurement automatically updated stock levels, which were further adjusted upon product sales, reflecting real manufacturing conversion logic."
+      - "Built role-based access control supporting four user types across two interfaces: internal staff (admin, manager, employee) and a public-facing e-commerce portal with individual and business customer accounts distinguished by tax ID."
+      - "Developed module-specific reporting and data export features across procurement, inventory, and customer management functions."
+
+  - id: "wanin"
+    company: "Wanin International"
+    role: "Full Stack Engineer"
+    period: "Mar 2019 - Feb 2020"
+    location: "Taichung, Taiwan"
+    keywords:
+      - full-stack
+      - frontend
+      - backend
+      - Laravel
+      - Vue.js
+      - AWS
+      - Agile
+      - MySQL
+      - MVC
+      - UI design
+      - jQuery
+      - Bootstrap
+      - AWS S3
+      - Figma
+      - barcode
+      - library management
+      - data modeling
+    bullets:
+      - "Built a barcode-driven library management system handling three distinct workflows: inventory import via ISBN scan, donation intake with new barcode generation and donor linkage, and member-based book lending with dual barcode verification."
+      - "Designed data models in Laravel to track the full book lifecycle from donation or acquisition through lending and return, reducing data entry time by 70%."
+      - "Stored book records and donation and lending history on AWS S3 with backend deployed on internal company servers."
+      - "Designed UI mockups in Figma and implemented responsive frontend using jQuery and Bootstrap for both internal staff portal and public-facing pages including collection browsing, announcements, and donor leaderboard."
 
 # ============================================================
 # PROJECTS — 專案經歷
@@ -205,7 +252,7 @@ experiences:
 projects:
   - id: "resume_agent"
     name: "Resume Agent"
-    period: "Apr 2026 – Present"
+    period: "Apr 2026 - Present"
     tech:
       - Claude Code
       - Claude API
@@ -228,7 +275,7 @@ projects:
 
   - id: "pokopia"
     name: "Pokopia Blueprint Editor"
-    period: "Apr 2026 – Present"
+    period: "Apr 2026 - Present"
     tech:
       - React
       - Three.js
@@ -250,7 +297,7 @@ projects:
 
   - id: "agent_utest"
     name: "AgentUTest"
-    period: "Jan 2024 – Mar 2024"
+    period: "Jan 2024 - Mar 2024"
     tech:
       - Python
       - React
@@ -272,7 +319,7 @@ projects:
       - "Implemented agent orchestration layer coordinating structured inter-agent dialogue and voting-based verification, enabling LLMs to self-correct and iteratively improve generated test quality."
   - id: "ar_indoor_nav"
     name: "Indoor AR Emergency Navigation App"
-    period: "April 2024 – June 2024."
+    period: "April 2024 - June 2024."
     tech:
       - Swift
       - ARKit
